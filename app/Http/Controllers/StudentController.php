@@ -61,7 +61,7 @@ class StudentController extends Controller
             $student->update($request->all());
             return new studentResource($student, 'Success', 'Student updated successfully');
         } else {
-            return new studentResource($student, 'Failed', 'Student not found');
+            return new studentResource(null, 'Failed', 'Student not found');
         }
     }
 
